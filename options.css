@@ -1,0 +1,15 @@
+h1 {
+    font-size: 47px;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+.blank {
+    height: 16px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>YTCaption Options</title>
+    <link rel="stylesheet" href="./bootstrap-4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./options.css">
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="options.js"></script>
+    <script src="./bootstrap-4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="bg-light">
+    <div class="container">
+
+    <div class="blank"></div>
+    <div class="row">
+      <img src="./logo.png" height="48px" style="margin:5px">
+      <h1>Options</h1>
+    </div>
+
+    <div class="blank"></div>
+
+    <p>CSSの文法で表記してください。</p>
+    <p>空の項目は、YouTube側の設定が適用されます。</p>
+
+    <div class="blank"></div>
+
+    <h2>フォント設定</h2>
+    <div class="blank"></div>
+
+    <form>
+      <div class="form-group">
+        <label class="h4" for="font-family">フォント（font-family）</label>
+        <input type="text" class="form-control" id="font-family">
+        <small class="form-text text-muted">
+          <p>以下のように入力してください。PCのフォントを使用する際は、「"Impact"」のように入力してください。</p>
+          <p>映画風にするなら、"<a target=”_blank” href="https://cute-freefont.flop.jp/sinecaption.html">しねきゃぷしょん</a>"がオススメです。</p>
+          <ul>
+            <li style="font-family: sans-serif">sans-serif</li>
+            <li style="font-family: serif">serif</li>
+            <li style="font-family: cursive">cursive</li>
+            <li style="font-family: fantasy">fantasy</li>
+          </ul>
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label class="h4" for="font-size">サイズ（font-size）</label>
+        <input type="text" class="form-control" id="font-size">
+        <small class="form-text text-muted">
+          <p>「30px」や「250%」などのように入力できます。</p>
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label class="h4" for="font-weight">太さ（font-weight）</label>
+        <input type="text" class="form-control" id="font-weight">
+        <small class="form-text text-muted">
+          <p>「bold」で太字になります。</p>
+          <p>100、200、… 900のように100単位で入力することもできます。</p>
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label class="h4" for="color">文字色（color）</label>
+        <input type="text" class="form-control" id="color">
+        <small class="form-text text-muted">
+          <p>red、yellow、blackなど色の名前を入力できます。</p>
+          <p>#000000、rgb(0,0,0,0)などもできます。</p>
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label class="h4" for="background">背景色（background）</label>
+        <input type="text" class="form-control" id="background">
+        <small class="form-text text-muted">
+          <p>上と同様に色を指定できます。</p>
+          <p>rgba(0,0,0,0)と入れると、背景を透明にできます。</p>
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label class="h4" for="text-shadow">影、縁取り（text-shadow）</label>
+        <input type="text" class="form-control" id="text-shadow">
+        <small class="form-text text-muted">
+          <p>以下の内容をコピーすると、縁取りができます。</p>
+          <p>black 2px 0px,  black -2px 0px,   black 0px -2px, black 0px 2px,   black 2px 2px , black -2px 2px,   black 2px -2px, black -2px -2px,   black 1px 2px,  black -1px 2px,   black 1px -2px, black -1px -2px,   black 2px 1px,  black -2px 1px,   black 2px -1px, black -2px -1px</p>
+        </small>
+      </div>
+
+      <button id="save" type="button" class="btn btn-primary">保存</button>
+
+    </form>
+    <div class="blank"></div>
+    <form>
+    <h2>プレビュー</h2>
+
+    <div class="blank"></div>
+    <p>適用を押すと、現在の設定での字幕サンプルが確認できます。</p>
+    <div class="blank"></div>
+
+    <div class="form-group">
+      <label class="h4" for="preview">表示するテキスト</label>
+      <input type="text" class="form-control" id="preview">
+    </div>
+    <button id="previewbtn" type="button" class="btn btn-primary">適用</button>
+    <p>
+    </form>
+
+    <div class="blank"></div>
+    <span id="caption" class="ytp-caption-segment" style='display: inline-block; white-space: pre-wrap; background: rgba(8, 8, 8, 0.75); font-size: 20.5333px; color: rgb(255, 255, 255); fill: rgb(255, 255, 255); font-family: "YouTube Noto", Roboto, "Arial Unicode Ms", Arial, Helvetica, Verdana, "PT Sans Caption", sans-serif;'></span>
+    <div id="style" style="height:50px"></div>
+
+    </div>
+
+  </body>
+</html>
